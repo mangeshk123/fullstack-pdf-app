@@ -1,0 +1,22 @@
+<div class="card-grid">
+  <div class="pdf-card" *ngFor="let file of pdfFiles">
+    <div class="card-header">
+      <i class="fas fa-file-pdf pdf-icon"></i>
+      <h4>{{ file }}</h4>
+    </div>
+
+    <div class="card-actions">
+      <button (click)="openPdf(file)" class="btn btn-preview">
+        <i class="fas fa-eye"></i> Preview
+      </button>
+      <a [href]="'/pdfs/' + file" target="_blank" rel="noopener" class="btn btn-download">
+        <i class="fas fa-download"></i> Download
+      </a>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="selectedPdfUrl" class="pdf-viewer-box">
+  <h3>📘 Viewing PDF:</h3>
+  <pdf-viewer [src]="selectedPdfUrl" [render-text]="true" style="width: 100%; height: 100vh"></pdf-viewer>
+</div>
