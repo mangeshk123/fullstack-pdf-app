@@ -128,3 +128,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+pdflist/.editorconfig
+pdflist/.vscode/extensions.json
+pdflist/.vscode/launch.json
+pdflist/.vscode/tasks.json
+pdflist/package-lock.json
